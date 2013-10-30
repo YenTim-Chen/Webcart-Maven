@@ -15,9 +15,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+         <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+    <META HTTP-EQUIV="EXPIRES" CONTENT="-1" />
     </head>
     <body>
         <h1>Hello ${username}!</h1>
+        <a href="http://localhost:8084/Webcar1008/Logout"<h2>logout</h2></a></br>
         <a href="addbook.jsp"<h3>addbook</h3></a>
         <a href="carservlet">cart</a>
         <a href="clearall">all clear</a>

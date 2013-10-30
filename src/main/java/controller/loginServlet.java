@@ -46,11 +46,12 @@ public class loginServlet extends HttpServlet {
                   UserService userservice = (UserService) context.getAttribute("UserService");
                   Userbean userbean = new Userbean(loginName, password);
                   
-                  if (!userservice.userRepeat(userbean).isEmpty()) {
-                              HttpSession session=request.getSession();
-                              session.setAttribute("username",loginName);
+                  if (!userservice.userRepeat(userbean).isEmpty()) 
+                  {
+                        HttpSession session=request.getSession();
+                        session.setAttribute("username",loginName);
                         response.sendRedirect("ShowBooks");
-                        return;
+                        
                   } else {
                         response.sendRedirect("Login.jsp");
                         return;
