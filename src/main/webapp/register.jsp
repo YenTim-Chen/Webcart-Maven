@@ -13,7 +13,8 @@
       </head>
       <body>
             <h1>Hello World!</h1>
-            <form action="Register" method="get">
+            <h3>${message}</h3>
+            <form action="Register" method="post">
             Account:<input type="text" name="account"/></br>
             Password:<input type="password" name="password"/></br>
             <input type="submit" value="add user">

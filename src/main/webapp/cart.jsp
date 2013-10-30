@@ -35,7 +35,7 @@
                         </tr>
                   </c:forEach>
             </table>
-            <h3><a href="book.jsp">回首頁,繼續購物</a></h3>
+            <h3><a href="Userjsp.jsp">回首頁,繼續購物</a></h3>
             <h3><a href="car.jsp">結帳<h3>
                               </body>
                               </html>

@@ -7,6 +7,7 @@ package controller;
 import Service.BookService;
 import Service.UserService;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,8 +20,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author timchen
  */
-@WebServlet(name = "ShowBooks", urlPatterns = {"/ShowBooks"})
-public class ShowBooks extends HttpServlet {
+@WebServlet(name = "UserBooks", urlPatterns = {"/UserBooks"})
+public class UserBooks extends HttpServlet {
 
       /**
        * Processes requests for both HTTP
@@ -33,8 +34,8 @@ public class ShowBooks extends HttpServlet {
        * @throws IOException if an I/O error occurs
        */
       protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-              throws ServletException, IOException {   
-            if(!checkLogin(request))
+              throws ServletException, IOException {
+             if(!checkLogin(request))
             {
             response.sendRedirect("Login.jsp");
             }else{
@@ -46,12 +47,12 @@ public class ShowBooks extends HttpServlet {
             HttpSession session=request.getSession();
             session.setAttribute("books", bookservice.getBook());
             //context.setAttribute("books", bookservice.getbook());
-            response.sendRedirect("Adminjsp.jsp");
+            response.sendRedirect("Userjsp.jsp");
             //request.getRequestDispatcher("book.jsp").forward(request, response);
             }
+            
       }
-      
-      public Boolean checkLogin(HttpServletRequest request)
+       public Boolean checkLogin(HttpServletRequest request)
       {
             boolean isLogin=false;
             HttpSession session=request.getSession();

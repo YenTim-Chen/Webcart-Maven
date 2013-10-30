@@ -43,7 +43,7 @@ public class carservlet extends HttpServlet {
             HttpSession session = request.getSession();
             if (request.getServletPath().equals("/clearall")) {
                   clearall(request, response);
-                  response.sendRedirect("book.jsp");
+                  response.sendRedirect("Userjsp.jsp");
                   return;
             }
 
@@ -72,9 +72,6 @@ public class carservlet extends HttpServlet {
 //                        car=cart.deleteone(id);
 //                     }
 //                 
-                 
-
-
             }
 
             ServletContext context = this.getServletContext();

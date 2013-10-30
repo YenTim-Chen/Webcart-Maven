@@ -41,22 +41,29 @@ public class Register extends HttpServlet {
             ServletContext context=this.getServletContext();
             UserService userService=(UserService)context.getAttribute("UserService");
             
-            if(userService.userRepeat(new Userbean(account,password)).isEmpty())
+            if(!account.isEmpty() && !password.isEmpty())
             {
-            userService.addUser(new Userbean(account,password));
-            HttpSession session=request.getSession();
-                    session.setAttribute("username",account);
-            response.sendRedirect("ShowBooks");
-            
+            //尋找新註冊的人有沒有重複 empty代表沒有
+                  if(userService.userRepeat(new Userbean(account,password)).isEmpty())
+                  {
+                  userService.addUser(new Userbean(account,password));
+                  HttpSession session=request.getSession();
+                          session.setAttribute("username",account);
+                  
+                          response.sendRedirect("ShowBooks");
+                  
+
+                  }else{
+                  request.setAttribute("message","User Repeat");
+                  request.getRequestDispatcher("register.jsp").forward(request, response);
+                  //response.sendRedirect("register.jsp");
+                  }
             }else
             {
-            response.sendRedirect("register.jsp");
-            
+            request.setAttribute("message","please input full Accout!!");
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+            //response.sendRedirect("register.jsp");
             }
-                  
-            
-            
-            
             
           
       }

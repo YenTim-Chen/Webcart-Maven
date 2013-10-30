@@ -1,29 +1,25 @@
 <%-- 
-    Document   : book
-    Created on : 2013/10/8, 下午 04:04:04
+    Document   : Userjsp
+    Created on : Oct 30, 2013, 2:04:59 PM
     Author     : timchen
 --%>
 
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="java.util.List"%>
-<%@page import="model.bookbean"%>
-<%@page import="model.bookbean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-         <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
-    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
-    <META HTTP-EQUIV="EXPIRES" CONTENT="-1" />
-    </head>
-    <body>
-        <h1>Hello ${username}!</h1>
-        <a href="http://localhost:8084/Webcar1008/Logout"<h2>logout</h2></a></br>
-        <a href="addbook.jsp"<h3>addbook</h3></a>
-        <a href="carservlet">cart</a>
+      <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>JSP Page</title>
+            <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+            <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+            <META HTTP-EQUIV="EXPIRES" CONTENT="-1" />
+      </head>
+      <body>
+           
+            <h1>Hello ${username}!</h1>
+            <a href="http://localhost:8084/Webcar1008/Logout"<h2>logout</h2></a></br>
+            <a href="carservlet">cart</a>
         <a href="clearall">all clear</a>
         <table border='1'>
             <tr>
@@ -43,5 +39,5 @@
                 </tr>
             </c:forEach>
         </table>
-    </body>
+      </body>
 </html>
