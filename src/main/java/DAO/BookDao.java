@@ -15,4 +15,5 @@ public interface BookDao {
       public void addBook(bookbean bookbean);
       public List<bookbean> getBooks();
       public bookbean getOnebook(int id);
+      public List<bookbean> getSearch(bookbean bookbean);
 }
