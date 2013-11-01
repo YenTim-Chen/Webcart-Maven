@@ -14,7 +14,7 @@
       <body>
             
             <h1>找書？ 請輸入相關資訊</h1>
-            <form action="Search" method="post">
+            <form action="Search" method="get">
             ID:<input type="text"name="id"/></br>
             Bookname:<input type="text" name="bookname"/></br>
             Publisher:<input type="text" name="publisher"/></br>

@@ -33,9 +33,11 @@ public class Search extends HttpServlet {
        */
       protected void processRequest(HttpServletRequest request, HttpServletResponse response)
               throws ServletException, IOException {
-            response.setContentType("text/html;charset=UTF-8");
-            System.out.println(request.getCharacterEncoding());
+//            response.setContentType("text/html;charset=UTF-8");
+//            System.out.println(request.getCharacterEncoding());
             System.out.println(response.getCharacterEncoding());
+//            request.setCharacterEncoding("utf-8");
+            
             String sid=(String)request.getParameter("id");
             int id;
             if(sid.isEmpty())
