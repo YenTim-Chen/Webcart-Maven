@@ -19,6 +19,7 @@
            
             <h1>Hello ${username}!</h1>
             <a href="http://localhost:8084/Webcar1008/Logout"<h2>logout</h2></a></br>
+            <a href="Search.jsp">Search Book</a>
             <a href="carservlet">cart</a>
         <a href="clearall">all clear</a>
         <table border='1'>

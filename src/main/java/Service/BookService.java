@@ -17,6 +17,10 @@ public class BookService {
             this.bookdaoimpl = bookdao;
       }
 
+      public List<bookbean> getSerach(bookbean bookbean)
+      {
+      return bookdaoimpl.getSearch(bookbean);
+      }
      
       
       public void addBook(bookbean bookbean) {
